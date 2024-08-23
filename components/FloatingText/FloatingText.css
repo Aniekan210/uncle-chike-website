@@ -1,0 +1,7 @@
+.floating-text {
+  position: absolute;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  z-index: 1; /* Ensure it's above the light beams */
+}

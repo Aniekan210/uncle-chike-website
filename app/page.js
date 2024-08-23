@@ -1,12 +1,10 @@
-"use client"
-
-import HeroSection from '@/components/HeroSection/HeroSection.js';
+import HomePage from '@/components/HomePage';
 
 const page = () => {
 
   return (
     <>
-      <HeroSection />
+      <HomePage />
     </>
   );
 }

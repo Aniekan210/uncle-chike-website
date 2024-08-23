@@ -1,0 +1,70 @@
+.light-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 80%
+  );
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* Keyframes for torch positions */
+@keyframes torchTopLeft {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes torchTopRight {
+  0% {
+    transform: translate(calc(-50% + 100vw), -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(calc(-50% + 100vw), -50%) rotate(0deg);
+  }
+}
+
+@keyframes torchBottomLeft {
+  0% {
+    transform: translate(-50%, calc(-50% + 100vh)) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, calc(-50% + 100vh)) rotate(0deg);
+  }
+}
+
+@keyframes torchBottomRight {
+  0% {
+    transform: translate(calc(-50% + 100vw), calc(-50% + 100vh)) rotate(0deg);
+  }
+  100% {
+    transform: translate(calc(-50% + 100vw), calc(-50% + 100vh)) rotate(0deg);
+  }
+}
+
+/* Animation classes for different positions */
+.torch-top-left {
+  animation: torchTopLeft 2s infinite;
+}
+
+.torch-top-right {
+  animation: torchTopRight 2s infinite;
+}
+
+.torch-bottom-left {
+  animation: torchBottomLeft 2s infinite;
+}
+
+.torch-bottom-right {
+  animation: torchBottomRight 2s infinite;
+}

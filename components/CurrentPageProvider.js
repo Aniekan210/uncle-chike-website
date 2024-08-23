@@ -5,9 +5,11 @@ const CurrentPageContext = createContext();
 
 const CurrentPageProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [lightPos, setLightPos] = useState('top-left');
+
 
   return (
-    <CurrentPageContext.Provider value={{ currentPage, setCurrentPage }}>
+    <CurrentPageContext.Provider value={{ currentPage, setCurrentPage, lightPos, setLightPos }}>
       {children}
     </CurrentPageContext.Provider>
   )
