@@ -17,6 +17,8 @@
 
 .textContainer h1 {
   font-weight: 500;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .textContainer h2 {
@@ -24,6 +26,8 @@
   margin: 0;
   line-height: 0;
   font-weight: 400;
+  pointer-events: none;
+  cursor: pointer;
 }
 
 .name {
