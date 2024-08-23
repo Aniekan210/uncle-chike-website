@@ -10,4 +10,12 @@
 html,
 body {
   font-family: "Lato", sans-serif; /* Fallback font */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: #111;
+  color: white;
 }

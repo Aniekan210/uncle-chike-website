@@ -1,11 +1,9 @@
 /* app/components/HeroSection/HeroSection.module.css */
 .heroContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   height: 100vh;
   text-align: center;
-  background-color: #111;
   color: white;
   padding: 0 20px;
 }
