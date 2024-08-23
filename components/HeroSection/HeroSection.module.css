@@ -1,0 +1,82 @@
+/* app/components/HeroSection/HeroSection.module.css */
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 0 20px;
+}
+
+.textContainer {
+  max-width: 800px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+
+.textContainer h1 {
+  font-weight: 500;
+}
+
+.textContainer h2 {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  font-weight: 400;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.roleContainer {
+  margin-top: 10px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 600px) {
+  .textContainer h1 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .textContainer h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .textContainer h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .textContainer h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .textContainer h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .textContainer h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .textContainer h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  .textContainer h2 {
+    font-size: 2.5rem;
+  }
+}

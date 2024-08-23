@@ -1,13 +1,35 @@
-import Link from 'next/link';
-import HeroName from '@/components/HeroName.js';
+import HeroSection from '@/components/HeroSection/HeroSection.js';
 
 const page = () => {
 
   return (
     <>
-      <h1>Home Page</h1>
-      <Link href='/about'>Go to About</Link>
-      <HeroName />
+      <HeroSection />
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </>
   );
 }
