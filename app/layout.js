@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import AosInit from '@/components/AosInit.js';
+import CurrentPageProvider from '@/components/CurrentPageProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,7 +16,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <AosInit/>
       <body className={inter.className}>
-        {children}
+        <CurrentPageProvider>
+          {children}
+        </CurrentPageProvider>
       </body>
     </html>
   );

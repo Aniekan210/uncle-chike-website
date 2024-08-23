@@ -1,3 +1,5 @@
+"use client"
+
 import HeroSection from '@/components/HeroSection/HeroSection.js';
 
 const page = () => {

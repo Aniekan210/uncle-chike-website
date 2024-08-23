@@ -1,20 +1,23 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useCurrentPage } from '../CurrentPageProvider';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './HeroSection.module.css';
 
 const roles = ['Producer', 'Writer', 'Director', 'GameChanger'];
 const colors = ['#FF6F61', '#B0B0B0', '#1ABC9C', '#F39C12'];
-const fonts = ['Bebas Neue, sans-serif', 'Georgia, serif', 'Poppins, sans-serif', 'Montserrat, sans-serif'];
+const fonts = ['Anton, sans-serif', 'Playfair Display, serif', 'Cinzel, serif', 'Impact, sans-serif'];
 
 export default function HeroSection() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1 });
+  const { currentPage } = useCurrentPage();
 
   useEffect(() => {
+    console.log(currentPage);
     const interval = setInterval(() => {
       setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
     }, 2000);
