@@ -1,3 +1,4 @@
+// components/HeroSection/HeroSection.js
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -39,7 +40,7 @@ export default function HeroSection() {
   }, [inView, controls]);
 
   return (
-    <AnimatePresence mode='wait'>
+    <>
       <div className={styles.heroContainer} ref={ref}>
         <motion.div
           className={styles.textContainer}
@@ -48,7 +49,7 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
         >
           <motion.h1
-            exit={{ x: '100%' }}
+            exit={{ x: '100%', transition: { duration: 0.5 } }}
             className={styles.name}>CHIKEZIE TEDDY OHIAGU-ANANABA</motion.h1>
           <motion.h2 className={styles.roleContainer}>
             a{' '}
@@ -66,6 +67,6 @@ export default function HeroSection() {
           </motion.h2>
         </motion.div>
       </div>
-    </AnimatePresence>
+    </>
   );
 }

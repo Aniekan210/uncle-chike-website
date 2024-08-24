@@ -1,22 +1,28 @@
+// components/HomePage.js
 "use client";
 
 import HeroSection from "@/components/HeroSection/HeroSection.js";
 import { useCurrentPage } from "./CurrentPageProvider";
+import { AnimatePresence } from "framer-motion";
 
 const HomePage = () => {
 
-  const { setCurrentPage } = useCurrentPage();
+  const { setCurrentPage, setLightPos } = useCurrentPage();
 
   const handleButtonClick = () => {
-    setCurrentPage('about');
-    /* const arr = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
+    /* setTimeout(() => {
+      setCurrentPage("about");
+    }, 500); */
+    const arr = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
     const randomIndex = Math.floor(Math.random() * arr.length);
-    setLightPos(arr[randomIndex]); */
+    setLightPos(arr[randomIndex]);
   }
 
   return (
     <>
-      <HeroSection />
+      <AnimatePresence mode="wait">
+        <HeroSection />
+      </AnimatePresence>
       <button style={{
         position: 'absolute',
         zIndex: 5,

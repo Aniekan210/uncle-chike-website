@@ -13,3 +13,35 @@
   pointer-events: none;
   z-index: 0;
 }
+
+/* Phones: max-width 600px */
+@media (max-width: 600px) {
+  .light-beam {
+    width: 150%;
+    height: 150%;
+  }
+}
+
+/* Tablets: max-width 1024px */
+@media (max-width: 1024px) {
+  .light-beam {
+    width: 175%;
+    height: 175%;
+  }
+}
+
+/* Desktops: max-width 1440px */
+@media (max-width: 1440px) {
+  .light-beam {
+    width: 200%;
+    height: 200%;
+  }
+}
+
+/* Large Desktops: >1440px */
+@media (min-width: 1441px) {
+  .light-beam {
+    width: 250%;
+    height: 250%;
+  }
+}
