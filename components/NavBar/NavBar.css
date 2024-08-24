@@ -11,6 +11,7 @@
   margin: 30px 0;
   z-index: 99;
   box-shadow: 0 0 10px #0000004b;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-item {
@@ -26,4 +27,8 @@
 .nav-item:hover,
 .nav-item:focus {
   background-color: #9797976f;
+}
+
+.gap {
+  gap: 20px;
 }

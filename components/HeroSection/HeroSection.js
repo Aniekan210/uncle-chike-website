@@ -9,7 +9,7 @@ import styles from './HeroSection.module.css';
 
 const roles = ['Producer', 'Writer', 'Director', 'GameChanger'];
 const colors = ['#FF6F61', '#B0B0B0', '#1ABC9C', '#F39C12'];
-const fonts = ['Anton, sans-serif', 'Playfair Display, serif', 'Cinzel, serif', 'Impact, sans-serif'];
+const fonts = ['Franklin Gothic Medium', 'Playfair Display, serif', 'Cinzel, serif', 'Impact, sans-serif'];
 
 export default function HeroSection() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
