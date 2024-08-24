@@ -50,7 +50,9 @@ export default function HeroSection() {
         >
           <motion.h1
             key="hero-h1"
+            initial={{ opacity: 1 }}
             exit={{ x: '100%', transition: { duration: 0.5 } }}
+            transition={{ duration: 1 }}
             className={styles.name}>CHIKEZIE TEDDY OHIAGU-ANANABA</motion.h1>
           <motion.h2 className={styles.roleContainer}>
             a{' '}

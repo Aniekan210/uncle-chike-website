@@ -4,7 +4,7 @@ import { useState, useContext, createContext } from 'react';
 const CurrentPageContext = createContext();
 
 const CurrentPageProvider = ({ children }) => {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState('/');
   const [lightPos, setLightPos] = useState('topLeft');
 
 

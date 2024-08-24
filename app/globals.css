@@ -19,7 +19,16 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   text-align: center;
-  background-color: #111;
+  background: linear-gradient(
+      135deg,
+      #111 0%,
+      #1a1a1a 40%,
+      #292929 70%,
+      #333 100%
+    ),
+    radial-gradient(circle at top left, #000 10%, transparent 50%),
+    radial-gradient(circle at bottom right, #444 20%, transparent 80%);
+  background-blend-mode: multiply;
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
