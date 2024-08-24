@@ -1,17 +1,17 @@
 "use client";
 
 import HeroSection from "@/components/HeroSection/HeroSection.js";
-import LightBeam from "./LightBeam/LightBeam";
 import { useCurrentPage } from "./CurrentPageProvider";
 
 const HomePage = () => {
 
-  const { setLightPos } = useCurrentPage();
+  const { setCurrentPage } = useCurrentPage();
 
-  const handleLightChange = () => {
-    const arr = ['top-left', 'top-right', 'bottom-left', 'bottom-right'];
+  const handleButtonClick = () => {
+    setCurrentPage('about');
+    /* const arr = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
     const randomIndex = Math.floor(Math.random() * arr.length);
-    setLightPos(arr[randomIndex]);
+    setLightPos(arr[randomIndex]); */
   }
 
   return (
@@ -22,8 +22,7 @@ const HomePage = () => {
         zIndex: 5,
         top: '50%',
         left: '50%'
-      }} onClick={handleLightChange}>Change Position</button>
-      <LightBeam />
+      }} onClick={handleButtonClick}>Change Position</button>
     </>
   );
 };

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useCurrentPage } from '../CurrentPageProvider';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './HeroSection.module.css';
 
@@ -39,29 +39,33 @@ export default function HeroSection() {
   }, [inView, controls]);
 
   return (
-    <div className={styles.heroContainer} ref={ref}>
-      <motion.div
-        className={styles.textContainer}
-        animate={controls}
-        initial={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <motion.h1 className={styles.name}>CHIKEZIE TEDDY OHIAGU-ANANABA</motion.h1>
-        <motion.h2 className={styles.roleContainer}>
-          a{' '}
-          <motion.span
-            key={roles[currentRoleIndex]}
-            style={{ fontFamily: fonts[currentRoleIndex], color: colors[currentRoleIndex] }}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-            className={styles.role}
-          >
-            {roles[currentRoleIndex].toUpperCase()}
-          </motion.span>
-        </motion.h2>
-      </motion.div>
-    </div>
+    <AnimatePresence mode='wait'>
+      <div className={styles.heroContainer} ref={ref}>
+        <motion.div
+          className={styles.textContainer}
+          animate={controls}
+          initial={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <motion.h1
+            exit={{ x: '100%' }}
+            className={styles.name}>CHIKEZIE TEDDY OHIAGU-ANANABA</motion.h1>
+          <motion.h2 className={styles.roleContainer}>
+            a{' '}
+            <motion.span
+              key={roles[currentRoleIndex]}
+              style={{ fontFamily: fonts[currentRoleIndex], color: colors[currentRoleIndex] }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.5 }}
+              className={styles.role}
+            >
+              {roles[currentRoleIndex].toUpperCase()}
+            </motion.span>
+          </motion.h2>
+        </motion.div>
+      </div>
+    </AnimatePresence>
   );
 }

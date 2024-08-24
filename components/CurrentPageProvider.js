@@ -5,7 +5,7 @@ const CurrentPageContext = createContext();
 
 const CurrentPageProvider = ({ children }) => {
   const [currentPage, setCurrentPage] = useState('home');
-  const [lightPos, setLightPos] = useState('top-left');
+  const [lightPos, setLightPos] = useState('topLeft');
 
 
   return (
