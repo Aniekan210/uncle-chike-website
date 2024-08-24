@@ -18,7 +18,7 @@ const NavBar = () => {
       className='navbar'
       initial={{ top: -100, opacity: 0 }}
       animate={isHome ? { top: 0, opacity: 1, left: '50%', boxShadow: '0 0 10px #0000004b' } : { top: 0, opacity: 1, left: '50%', boxShadow: 'none' }}
-      transition={{ delayChildren: 0, duration: 0.2, ease: 'easeInOut' }}
+      transition={{ delayChildren: 0, duration: 0.5, ease: 'easeInOut' }}
     >
       <NavLink active={false} isHome={isHome} href='/'>Home</NavLink>
       <NavLink active={currentPage === '/about'} isHome={isHome} href='/about'>About</NavLink>

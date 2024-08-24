@@ -4,14 +4,14 @@
 import HeroSection from "@/components/HeroSection/HeroSection.js";
 import { AnimatePresence } from "framer-motion";
 
-const HomePage = () => {
+const HomePage = ({ ref }) => {
 
   return (
-    <>
+    <div ref={ref}>
       <AnimatePresence mode="wait">
         <HeroSection key="hero-section" />
       </AnimatePresence>
-    </>
+    </div>
   );
 };
 
