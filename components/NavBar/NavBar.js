@@ -47,7 +47,7 @@ const NavLink = ({ children, href, isHome, active }) => {
       className='nav-item'
       onClick={route}
       initial={false}
-      animate={isHome ? { boxShadow: 'none', borderRadius: 0, marginLeft: 0, marginRight: 0, padding: '10px 22px' } : active ? { boxShadow: '0 0 10px #0000004b', borderRadius: 16, marginLeft: 8, marginRight: 8, padding: '10px 45px' } : { boxShadow: '0 0 10px #0000004b', borderRadius: 16, marginLeft: 8, marginRight: 8, padding: '10px 22px' }}
+      animate={isHome ? { boxShadow: 'none', borderRadius: 0, marginLeft: 0, marginRight: 0, padding: '10px 18px' } : active ? { boxShadow: '0 0 10px #0000004b', borderRadius: 16, marginLeft: 4, marginRight: 4, padding: '10px 30px' } : { boxShadow: '0 0 10px #0000004b', borderRadius: 16, marginLeft: 4, marginRight: 4, padding: '10px 18px' }}
       transition={{ duration: 0.1, ease: 'easeIn' }}
     >{children}</motion.button>
   );
