@@ -17,12 +17,20 @@ const LightBeam = () => {
   const position = positions[lightPos] || positions.topLeft;
 
   return (
-    <motion.div
-      className="light-beam"
-      initial={{ opacity: 0, x: position.x, y: position.y }}
-      animate={{ opacity: 1, x: position.x, y: position.y }}
-      transition={{ duration: 2, ease: 'easeInOut' }}
-    />
+    <div style={{
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      zIndex: 0,
+      overflow: 'hidden'
+    }}>
+      <motion.div
+        className="light-beam"
+        initial={{ opacity: 0, x: position.x, y: position.y }}
+        animate={{ opacity: 1, x: position.x, y: position.y }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+      />
+    </div>
   );
 };
 

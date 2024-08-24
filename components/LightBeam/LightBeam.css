@@ -9,9 +9,10 @@
     rgba(255, 255, 255, 0.15) 0%,
     transparent 80%
   );
-  filter: blur(20px);
+  filter: blur(30px);
   pointer-events: none;
   z-index: 0;
+  display: flex;
 }
 
 /* Phones: max-width 600px */
@@ -22,23 +23,23 @@
   }
 }
 
-/* Tablets: max-width 1024px */
-@media (max-width: 1024px) {
+/* Tablets: min-width 601px and max-width 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
   .light-beam {
     width: 175%;
     height: 175%;
   }
 }
 
-/* Desktops: max-width 1440px */
-@media (max-width: 1440px) {
+/* Desktops: min-width 1025px and max-width 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
   .light-beam {
     width: 200%;
     height: 200%;
   }
 }
 
-/* Large Desktops: >1440px */
+/* Large Desktops: min-width 1441px */
 @media (min-width: 1441px) {
   .light-beam {
     width: 250%;
