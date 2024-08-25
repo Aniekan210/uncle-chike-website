@@ -8,7 +8,7 @@ import LightBeam from "@/components/LightBeam/LightBeam";
 import NavBar from "@/components/NavBar/NavBar";
 import ContactPage from "@/components/ContactPage/ContactPage";
 
-const transition = { duration: 0.6, ease: "easeInOut" };
+const transition = { duration: 0.3, ease: "easeInOut" };
 
 const variants = {
   initial: { opacity: 0, y: 10 },

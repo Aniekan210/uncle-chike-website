@@ -2,7 +2,7 @@
 import './NavBar.css'
 import { useCurrentPage } from "../CurrentPageProvider"
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { easeInOut, motion } from 'framer-motion'
 
 
 const NavBar = () => {
@@ -16,9 +16,9 @@ const NavBar = () => {
   return (
     <motion.div
       className='navbar'
-      initial={{ top: -100, opacity: 0 }}
+      initial={{ top: -100, opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
       animate={isHome ? { top: 0, opacity: 1, left: '50%', boxShadow: '0 0 10px #0000004b' } : { top: 0, opacity: 1, left: '50%', boxShadow: 'none' }}
-      transition={{ delayChildren: 0, duration: 0.5, ease: 'easeInOut' }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
     >
       <NavLink active={false} isHome={isHome} href='/'>Home</NavLink>
       <NavLink active={currentPage === '/about'} isHome={isHome} href='/about'>About</NavLink>
@@ -34,7 +34,6 @@ const NavLink = ({ children, href, isHome, active }) => {
   const route = () => {
     setTimeout(() => {
       setCurrentPage(href);
-      console.log(href);
     }, 500);
     const arr = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
     const choices = arr.filter((p) => p !== lightPos);

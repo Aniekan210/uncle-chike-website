@@ -1,44 +1,27 @@
 /* components/ContactSection.module.css */
 
 .contactContainer {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: rgba(0, 0, 0, 0.61); /* Optional: Darken the background */
+  background-color: rgba(0, 0, 0, 0);
   overflow: hidden;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 .contactSection {
-  margin-top: 100px; /* Margin to account for the absolute-positioned nav */
-  max-height: 80vh; /* Increase the height of the section */
-  width: 80%;
-  padding: 50px;
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  max-width: 800px;
+  width: 100%;
+  margin: 65px 0 0;
+  max-height: 80vh;
+  padding: 10px 50px;
   border-radius: 15px;
   overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   background-color: transparent; /* Transparent background */
-}
-
-/* Custom scrollbar styling */
-.contactSection::-webkit-scrollbar {
-  width: 10px;
-}
-
-.contactSection::-webkit-scrollbar-thumb {
-  background-color: #cccccc; /* Light grey color for the scrollbar thumb */
-  border-radius: 5px;
-}
-
-.contactSection::-webkit-scrollbar-thumb:hover {
-  background-color: #ffffff; /* White on hover */
 }
 
 .contactInfo {
@@ -103,12 +86,26 @@
   font-size: 20px;
 }
 
+/* Custom scrollbar styling */
+.contactSection::-webkit-scrollbar {
+  width: 10px;
+}
+
+.contactSection::-webkit-scrollbar-thumb {
+  background-color: #cccccc; /* Light grey color for the scrollbar thumb */
+  border-radius: 5px;
+}
+
+.contactSection::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff; /* White on hover */
+}
+
 @media (max-width: 600px) {
   .contactSection {
     flex-direction: column;
-    padding: 20px 20px 30px;
-    max-height: 90vh; /* Adjust for smaller screens */
-    margin-top: 100px; /* Adjust margin for smaller screens */
+    padding: 20px;
+    max-height: 75vh; /* Adjust for smaller screens */
+    margin: 70px 0 0;
   }
 
   .contactInfo {
