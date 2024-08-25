@@ -1,0 +1,149 @@
+/* components/ContactSection.module.css */
+
+.contactContainer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.61); /* Optional: Darken the background */
+  overflow: hidden;
+}
+
+.contactSection {
+  margin-top: 100px; /* Margin to account for the absolute-positioned nav */
+  max-height: 80vh; /* Increase the height of the section */
+  width: 80%;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent */
+  border-radius: 15px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent; /* Transparent background */
+}
+
+/* Custom scrollbar styling */
+.contactSection::-webkit-scrollbar {
+  width: 10px;
+}
+
+.contactSection::-webkit-scrollbar-thumb {
+  background-color: #cccccc; /* Light grey color for the scrollbar thumb */
+  border-radius: 5px;
+}
+
+.contactSection::-webkit-scrollbar-thumb:hover {
+  background-color: #ffffff; /* White on hover */
+}
+
+.contactInfo {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 30px;
+}
+
+.contactHeading {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff; /* White color for the header */
+}
+
+.contactTopics {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #cccccc;
+  text-align: left;
+}
+
+.contactTopics li {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.contactTopics li::before {
+  content: "•";
+  color: #ffffff; /* White dot before the text */
+  position: absolute;
+  left: -20px;
+}
+
+.contactTopics li:hover {
+  color: #ffffff; /* White text on hover */
+}
+
+.contactDetails p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.contactDetails p a {
+  color: #cccccc; /* Light grey for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactDetails p a:hover {
+  color: #ffffff; /* White on hover */
+}
+
+.icon {
+  margin-right: 10px;
+  color: #cccccc; /* Light grey for icons */
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  .contactSection {
+    flex-direction: column;
+    padding: 20px 20px 30px;
+    max-height: 90vh; /* Adjust for smaller screens */
+    margin-top: 100px; /* Adjust margin for smaller screens */
+  }
+
+  .contactInfo {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .contactHeading {
+    font-size: 1.8rem;
+  }
+
+  .contactTopics li {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .contactHeading {
+    font-size: 2rem;
+  }
+
+  .contactTopics li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1441px) {
+  .contactHeading {
+    font-size: 2.2rem;
+  }
+
+  .contactTopics li {
+    font-size: 1.3rem;
+  }
+}
