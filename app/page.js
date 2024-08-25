@@ -19,7 +19,7 @@ const variants = {
 const pages = ["/", "/about", "/works", "/contact"];
 
 const Page = () => {
-  const { currentPage, setCurrentPage } = useCurrentPage();
+  const { setLightPos, lightPos, currentPage, setCurrentPage } = useCurrentPage();
   const [isScrolling, setIsScrolling] = useState(false);
   const touchStartY = useRef(null);
   const scrollTimeoutRef = useRef(null);
@@ -43,6 +43,10 @@ const Page = () => {
           setIsScrolling(false);
         }, transition.duration * 1000 + 200);
       }
+      const arr = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
+      const choices = arr.filter((p) => p !== lightPos);
+      const randomIndex = Math.floor(Math.random() * choices.length);
+      setLightPos(choices[randomIndex]);
     },
     [currentPage, setCurrentPage]
   );
