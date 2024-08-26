@@ -1,41 +1,22 @@
 /* app/components/HeroSection/HeroSection.module.css */
-.heroContainer {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  text-align: center;
-  color: white;
-  padding: 0 20px;
-}
-
 .textContainer {
   max-width: 800px;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 3rem;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .textContainer h1 {
-  font-weight: 500;
-  pointer-events: none;
   cursor: pointer;
 }
 
-.textContainer h2 {
+.role {
   padding: 0;
   margin: 0;
   line-height: 0;
   font-weight: 400;
-  pointer-events: none;
   cursor: pointer;
-}
-
-.name {
-  font-weight: bold;
-}
-
-.roleContainer {
-  margin-top: 10px;
 }
 
 /* Responsive Breakpoints */
@@ -45,7 +26,7 @@
     line-height: 3rem;
   }
 
-  .textContainer h2 {
+  .role {
     font-size: 1.5rem;
   }
 }
@@ -56,7 +37,7 @@
     line-height: 4rem;
   }
 
-  .textContainer h2 {
+  .role {
     font-size: 1.8rem;
   }
 }
@@ -67,7 +48,7 @@
     line-height: 5rem;
   }
 
-  .textContainer h2 {
+  .role {
     font-size: 2rem;
   }
 }
@@ -78,7 +59,7 @@
     line-height: 6rem;
   }
 
-  .textContainer h2 {
+  .role {
     font-size: 2.5rem;
   }
 }

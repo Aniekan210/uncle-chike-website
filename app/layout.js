@@ -1,9 +1,6 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 import AosInit from '@/components/AosInit.js';
 import CurrentPageProvider from '@/components/CurrentPageProvider';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'CHIKEZIE TEDDY OHIAGU-ANANABA',
@@ -11,11 +8,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  
+
   return (
     <html lang="en">
-      <AosInit/>
-      <body className={inter.className}>
+      <AosInit />
+      <body>
         <CurrentPageProvider>
           {children}
         </CurrentPageProvider>
