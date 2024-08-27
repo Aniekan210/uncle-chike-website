@@ -1,32 +1,115 @@
 .aboutContainer {
   display: flex;
-  max-width: 800px;
-  max-height: 85vh;
-  padding: 30px 0;
+  max-width: 1300px;
+  padding: 30px;
   flex-flow: row nowrap;
-  overflow: hidden auto;
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 100vh; /* Set a fixed height for scrolling */
 }
-.aboutContainer img {
+
+/* ImageWrapper and Image remain the same */
+
+.imageWrapper {
   flex: 1;
-  background-attachment: fixed;
-  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+
+.image {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Text Content and its elements remain the same */
 
 .textCont {
   text-align: left;
   display: flex;
-  flex: 1;
+  flex: 1.5;
   padding: 0 20px;
   flex-flow: column nowrap;
 }
 
 .textCont h1 {
-  font-size: 2.5rem;
-  margin: 0 0 10px 0;
+  font-size: 3rem;
+  margin: 0 0 20px 0;
+  color: #d5d5d5;
 }
 
 .textCont p {
-  margin: 15px 0 0;
-  font-size: 1rem;
-  font-family: serif;
+  margin: 15px 0;
+  font-size: 1.1rem;
+  font-family: "Merriweather", serif;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Mobile Devices: max-width 600px */
+@media (max-width: 600px) {
+  .aboutContainer {
+    flex-flow: column nowrap;
+    padding: 20px;
+    align-items: center;
+    max-height: 85vh;
+    height: auto; /* Adjust height for mobile */
+    overflow-y: auto;
+  }
+
+  .textCont {
+    padding: 20px 0 0;
+  }
+
+  .textCont h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Tablets: min-width 601px and max-width 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .aboutContainer {
+    padding: 40px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .textCont h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* Desktops: min-width 1025px and max-width 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .aboutContainer {
+    padding: 50px;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .textCont h1 {
+    font-size: 3.2rem;
+  }
+}
+
+/* Large Desktops: min-width 1441px */
+@media (min-width: 1441px) {
+  .aboutContainer {
+    padding: 60px;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .textCont h1 {
+    font-size: 3.5rem;
+  }
 }

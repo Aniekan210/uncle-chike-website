@@ -2,6 +2,7 @@
 import './NavBar.css'
 import { useCurrentPage } from "../CurrentPageProvider"
 import { motion } from 'framer-motion'
+import useDeviceType from '@/hooks/useDeviceType'
 
 
 const NavBar = () => {
@@ -27,6 +28,7 @@ const NavBar = () => {
 
 const NavLink = ({ children, href, active }) => {
   const { setCurrentPage, setLightPos, lightPos } = useCurrentPage();
+  const deviceType = useDeviceType();
 
   const route = () => {
     setTimeout(() => {
@@ -43,7 +45,7 @@ const NavLink = ({ children, href, active }) => {
       className={active ? 'nav-item active' : 'nav-item'}
       onClick={route}
       initial={false}
-      animate={active ? { border: 'none', padding: '10px 60px' } : { border: 'none', padding: '10px 16px' }}
+      animate={active ? deviceType === 'largeDesktop' ? { border: 'none', padding: '10px 80px' } : { border: 'none', padding: '10px 60px' } : deviceType === 'largeDesktop' ? { border: 'none', padding: '10px 30px' } : { border: 'none', padding: '10px 16px' }}
       transition={{ duration: 0.2, ease: 'easeInOut' }}
     >{children}</motion.button>
   );

@@ -16,7 +16,7 @@
   margin: 0;
   line-height: 0;
   font-weight: 400;
-  cursor: pointer;
+  cursor: default;
 }
 
 /* Responsive Breakpoints */

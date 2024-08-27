@@ -20,6 +20,7 @@
   background-color: #00000000;
   color: #ffffff;
   position: relative;
+  font-size: 1.5rem;
 }
 
 .nav-item::after,
@@ -71,6 +72,52 @@
   background-color: white;
 }
 
-.gap {
-  gap: 20px;
+/* Tablets: min-width 601px and max-width 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .nav-item {
+    font-size: 1rem;
+  }
+}
+
+/* Desktops: min-width 1025px and max-width 1440px */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .nav-item {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Desktops: min-width 1441px */
+@media (min-width: 1441px) {
+  .nav-item {
+    font-size: 1.3rem;
+  }
+
+  .nav-item:hover::before,
+  .nav-item:hover::after {
+    height: 30px;
+  }
+
+  .active::after,
+  .active::before {
+    content: "";
+    width: 1px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    background-color: white;
+  }
+
+  .active:hover::after,
+  .active:hover::before,
+  .active:focus::after,
+  .active:focus::before {
+    content: "";
+    width: 1px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    background-color: white;
+  }
 }

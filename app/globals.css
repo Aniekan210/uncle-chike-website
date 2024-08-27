@@ -35,7 +35,7 @@ body {
 
 /* Custom scrollbar styling */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 3px;
 }
 
 *::-webkit-scrollbar-thumb {
