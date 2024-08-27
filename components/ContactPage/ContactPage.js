@@ -37,6 +37,7 @@ export default function ContactSection() {
                     <motion.ul className={styles.contactTopics}>
                         <motion.li variants={itemVariants}>Short Films</motion.li>
                         <motion.li variants={itemVariants}>Feature Films</motion.li>
+                        <motion.li variants={itemVariants}>Documentaries</motion.li>
                         <motion.li variants={itemVariants}>TV Commercials</motion.li>
                         <motion.li variants={itemVariants}>Radio Commercials</motion.li>
                         <motion.li variants={itemVariants}>Voice Overs</motion.li>

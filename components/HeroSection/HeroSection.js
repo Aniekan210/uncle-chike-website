@@ -6,9 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
 import useDeviceType from '@/hooks/useDeviceType';
 
-const roles = ['Producer', 'Writer', 'Director', 'GameChanger'];
-const colors = ['#FF6F61', '#B0B0B0', '#1ABC9C', '#F39C12'];
-const fonts = ['"Franklin Gothic Medium"', 'Playfair Display, serif', 'Cinzel, serif', '"Impact", sans-serif'];
+const roles = ['Producer', 'Writer', 'Script Doctor', 'Director', 'Game Changer'];
 
 export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
@@ -22,6 +20,9 @@ export default function HeroSection() {
 
   return (
     <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -10 }}
       className={styles.container}
     >
       <motion.div
@@ -104,7 +105,6 @@ const Roles = () => {
     >
       <motion.h2
         key={roles[currentRoleIndex]}
-        style={{ fontFamily: fonts[currentRoleIndex], color: colors[currentRoleIndex] }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

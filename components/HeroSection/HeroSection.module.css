@@ -12,9 +12,7 @@
 }
 
 .textContainer {
-  padding: 30px;
   flex-flow: column nowrap;
-  max-width: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +23,7 @@
 
 .textContainer h1 {
   cursor: default;
-  max-width: 500px;
+  max-width: 750px;
 }
 
 .roleDiv {
@@ -38,11 +36,13 @@
 }
 
 .role {
-  padding: 0;
-  margin: 0;
   line-height: 0;
   font-weight: 400;
   cursor: default;
+  font-family: "Merriweather", serif;
+  color: #d4af37;
+  display: grid;
+  place-items: center;
 }
 
 /* Responsive Breakpoints */
@@ -53,7 +53,8 @@
   }
 
   .role {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    white-space: none;
   }
 }
 
@@ -83,6 +84,7 @@
   .textContainer h1 {
     font-size: 6rem;
     line-height: 6rem;
+    max-width: 900px;
   }
 
   .role {

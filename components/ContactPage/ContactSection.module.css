@@ -41,9 +41,9 @@
 
 .contactTopics li {
   cursor: default;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   font-size: 1.2rem;
-  padding: 5px 0;
+  padding: 2px 0;
   position: relative;
   transition: color 0.3s ease;
 }

@@ -56,7 +56,7 @@
     padding: 20px;
     align-items: center;
     max-height: 90vh;
-    height: auto; /* Adjust height for mobile */
+    height: 100%; /* Adjust height for mobile */
     overflow-y: auto;
   }
 
