@@ -1,7 +1,7 @@
 .aboutContainer {
   display: flex;
   max-width: 1300px;
-  padding: 30px;
+  padding: 0 30px;
   flex-flow: row nowrap;
   overflow-y: auto; /* Allow vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -55,8 +55,7 @@
     flex-flow: column nowrap;
     padding: 20px;
     align-items: center;
-    max-height: 90vh;
-    height: 100%; /* Adjust height for mobile */
+    max-height: 1000px; /* Adjust height for mobile */
     overflow-y: auto;
   }
 
@@ -79,8 +78,8 @@
 @media (min-width: 601px) and (max-width: 1024px) {
   .aboutContainer {
     padding: 40px;
-    max-height: 90vh;
     overflow-y: auto;
+    max-height: 85vh;
   }
 
   .textCont h1 {

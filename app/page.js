@@ -10,6 +10,7 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import useDeviceType from "@/hooks/useDeviceType";
 import MobileNavBar from "@/components/MobileNavbar/MobileNavBar";
 import AboutPage from "@/components/AboutPage/AboutPage";
+import WorksPage from "@/components/WorksPage/WorksPage";
 
 const transition = { duration: 0.3, ease: "easeInOut" };
 
@@ -78,7 +79,7 @@ const Page = () => {
               animate="animate"
               exit="exit"
             >
-              <h1>Works & Gallery Page</h1>
+              <WorksPage />
             </motion.div>
           )}
           {currentPage === "/contact" && (
