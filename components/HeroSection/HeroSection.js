@@ -13,11 +13,9 @@ const fonts = ['"Franklin Gothic Medium"', 'Playfair Display, serif', 'Cinzel, s
 export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);
   const deviceType = useDeviceType();
-  function canHover() {
-    return window.matchMedia('(hover: hover)').matches;
-  }
+
   useEffect(() => {
-    if (canHover()) {
+    if (deviceType === 'mobile' || deviceType === 'tablet') {
       setIsHovered(true);
     }
   }, [deviceType])
@@ -27,9 +25,6 @@ export default function HeroSection() {
       className={styles.container}
     >
       <motion.div
-        style={{
-          maxWidth: 800,
-        }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         className={styles.textContainer}
