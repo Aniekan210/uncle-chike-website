@@ -1,76 +1,84 @@
 .navDiv {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 1.7rem 0;
+  justify-content: right;
 }
 
-.navbar {
+.dropBtn {
+  display: grid;
+  place-items: center;
+  padding: 30px 20px;
+  background-color: transparent;
+}
+
+.dropdown {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  gap: 2px;
-}
-
-.nav-item {
-  width: fit-content;
-  text-align: center;
-  background-color: #00000000;
-  color: #ffffff;
-  position: relative;
-}
-
-.nav-item::after,
-.nav-item::before {
-  content: "";
-  width: 1px;
-  height: 0;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
+  width: 30px;
   background-color: white;
-  transition: height 0.1s;
+  height: 2px;
+  position: relative;
+  margin: 10px;
+}
+.dropdown::after,
+.dropdown::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  height: 2px;
+}
+.dropdown::after {
+  top: 10px;
+}
+.dropdown::before {
+  top: -10px;
 }
 
-.nav-item::before {
+.sideBar {
+  z-index: 100;
+  background-color: #000000;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  top: 0;
   right: 0;
 }
 
-.nav-item::after {
-  left: 0;
+.closeContainer {
+  display: flex;
+  justify-content: right;
 }
 
-.nav-item:hover::before,
-.nav-item:hover::after {
-  height: 30px;
+.closeBtn {
+  color: #ffffff;
+  font-size: 20px;
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 15px;
 }
 
-.active::after,
-.active::before {
-  content: "";
-  width: 1px;
-  height: 30px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  background-color: white;
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #ecececcd;
 }
 
-.active:hover::after,
-.active:hover::before,
-.active:focus::after,
-.active:focus::before {
-  content: "";
-  width: 1px;
-  height: 30px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  background-color: white;
+.linkContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px 30px;
+  gap: 10px;
 }
 
-.gap {
-  gap: 20px;
+.navItem {
+  background-color: #111;
+  width: 100%;
+  color: #fff;
+  padding: 16px 16px;
+}
+
+.navItem:hover,
+.navItem:focus {
+  background-color: #2d2d2de6;
 }

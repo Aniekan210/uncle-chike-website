@@ -1,30 +1,58 @@
 "use client"
 import styles from './MobileNavBar.module.css'
 import { useCurrentPage } from "../CurrentPageProvider"
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { useState } from 'react'
 
 
 const MobileNavBar = () => {
-  const { currentPage } = useCurrentPage();
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <motion.div className={styles.navDiv} >
-      <motion.div
-        className={styles.dropdown}
-        initial={{ right: -100, opacity: 0 }}
-        animate={{ right: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-      >
-        Mobile
-      </motion.div>
+      <motion.button onClick={() => setSidebarOpen(true)} className={styles.dropBtn}>
+        <motion.div
+          className={styles.dropdown}
+          initial={{ right: -100, opacity: 0 }}
+          animate={{ right: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+        />
+      </motion.button>
+      <AnimatePresence>
+        {sidebarOpen && (<SideBar setSidebarOpen={setSidebarOpen} />)}
+      </AnimatePresence>
     </motion.div>
   )
-}
+};
 
-const NavLink = ({ children, href, active }) => {
+const SideBar = ({ setSidebarOpen }) => {
+  return (
+    <motion.div
+      className={styles.sideBar}
+      initial={{ top: '-100%', opacity: 0 }}
+      animate={{ top: '0', opacity: 1 }}
+      exit={{ top: '-100%', opacity: 0 }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
+    >
+      <div className={styles.closeContainer}>
+        <button onClick={() => setSidebarOpen(false)} className={styles.closeBtn}>X</button>
+      </div>
+      <div className={styles.linkContainer}>
+        <NavLink setSidebarOpen={setSidebarOpen} href='/'>Home</NavLink>
+        <NavLink setSidebarOpen={setSidebarOpen} href='/about'>About</NavLink>
+        <NavLink setSidebarOpen={setSidebarOpen} href='/experience'>Experience</NavLink>
+        <NavLink setSidebarOpen={setSidebarOpen} href='/works'>Works & Gallery</NavLink>
+        <NavLink setSidebarOpen={setSidebarOpen} href='/contact'>Contact</NavLink>
+      </div>
+    </motion.div>
+  );
+};
+
+const NavLink = ({ setSidebarOpen, children, href }) => {
   const { setCurrentPage, setLightPos, lightPos } = useCurrentPage();
 
   const route = () => {
+    setSidebarOpen(false);
     setTimeout(() => {
       setCurrentPage(href);
     }, 500);
@@ -35,13 +63,7 @@ const NavLink = ({ children, href, active }) => {
   }
 
   return (
-    <motion.button
-      className={styles.navItem}
-      onClick={route}
-      initial={false}
-      animate={false}
-      transition={{ duration: 0.1, ease: 'easeInOut' }}
-    >{children}</motion.button>
+    <button onClick={route} className={styles.navItem}>{children}</button>
   );
 }
 
