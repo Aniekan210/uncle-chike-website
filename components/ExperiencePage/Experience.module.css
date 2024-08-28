@@ -1,0 +1,195 @@
+/* Container styling */
+.container {
+  padding: 50px 20px;
+  color: #fff;
+  height: 100vh; /* Fullscreen height */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow the entire container to scroll if needed */
+}
+
+.awardsSection {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.imageContainer {
+  flex: 0 0 25%; /* Image container takes up 25% of the width */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Space between the image and the awards text */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.awardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden; /* Ensure it's hidden initially */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  pointer-events: none; /* Ensure the tooltip doesn't block interactions */
+  z-index: 100; /* Ensure the tooltip is on top */
+}
+
+.imageWrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible; /* Make it visible on hover */
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.awardsTextContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.sectionTitle {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.awardScrollable {
+  overflow-y: auto; /* Enable vertical scrolling if necessary */
+  max-height: 200px; /* Restrict height to enable scrolling */
+}
+
+.awardItem {
+  margin-bottom: 15px;
+}
+
+.awardText {
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.contentSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.introText {
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  margin-right: 25px;
+  text-align: left;
+  max-width: 60%; /* Adjust the width to balance with the brands section */
+}
+
+.brandsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.brandsWrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.brandLogo {
+  margin: 10px;
+  flex-shrink: 0; /* Prevent logos from shrinking */
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+  .awardsSection {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    margin-bottom: 20px;
+    flex: 0 0 auto;
+  }
+
+  .awardsTextContainer {
+    flex: 1;
+  }
+
+  .contentSection {
+    flex-direction: column;
+  }
+
+  .introText {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .brandsWrapper {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .awardScrollable {
+    max-height: 300px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5em;
+  }
+
+  .awardText {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .awardScrollable {
+    max-height: 400px;
+  }
+
+  .sectionTitle {
+    font-size: 1.8em;
+  }
+
+  .awardText {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 1441px) {
+  .awardScrollable {
+    max-height: 500px;
+  }
+
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .awardText {
+    font-size: 1.4em;
+  }
+}

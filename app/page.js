@@ -11,6 +11,7 @@ import useDeviceType from "@/hooks/useDeviceType";
 import MobileNavBar from "@/components/MobileNavbar/MobileNavBar";
 import AboutPage from "@/components/AboutPage/AboutPage";
 import WorksPage from "@/components/WorksPage/WorksPage";
+import ExperiencePage from "@/components/ExperiencePage/ExperiencePage";
 
 const transition = { duration: 0.3, ease: "easeInOut" };
 
@@ -68,7 +69,7 @@ const Page = () => {
               animate="animate"
               exit="exit"
             >
-              <h1>Experience Page</h1>
+              <ExperiencePage />
             </motion.div>
           )}
           {currentPage === "/works" && (
