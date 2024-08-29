@@ -7,7 +7,12 @@ import styles from "./Experience.module.css"; // Assuming you're using CSS Modul
 
 const logos = [
   { src: "/images/quickteller_logo.png", alt: "Quickteller" },
+  { src: "/images/fidelity_logo.png", alt: "Fidelity" },
+  { src: "/images/nigerian-breweries_logo.png", alt: "Nigerian-breweries" },
+  { src: "/images/nestle_logo.png", alt: "Nestle" },
+  { src: "/images/fcmb_logo.png", alt: "Fcmb" },
   { src: "/images/mtn_logo.png", alt: "MTN" },
+  { src: "/images/interswitch_logo.png", alt: "Interswitch" },
   { src: "/images/prime_logo.png", alt: "PRIME" },
   // Add more logos as needed
 ];
@@ -135,7 +140,7 @@ const ExperiencePage = () => {
           <div className={styles.brandsWrapper}>
             {logos.map((logo, index) => (
               <div className={styles.brandLogo} key={index}>
-                <Image src={logo.src} alt={logo.alt} width={150} height={50} />
+                <img src={logo.src} alt={logo.alt} width='100px' />
               </div>
             ))}
           </div>

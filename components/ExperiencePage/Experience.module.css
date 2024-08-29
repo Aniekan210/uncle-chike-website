@@ -3,15 +3,16 @@
   padding: 50px 20px;
   color: #fff;
   height: 100vh; /* Fullscreen height */
+  overflow-y: auto; /* Allow the entire container to scroll if needed */
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Allow the entire container to scroll if needed */
 }
 
 .awardsSection {
   display: flex;
   align-items: flex-start;
   margin-bottom: 40px;
+  flex-wrap: wrap; /* Allows content to wrap within the container */
 }
 
 .imageContainer {
@@ -89,16 +90,20 @@
   text-align: left;
 }
 
+/* Content Section */
 .contentSection {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 40px;
+  padding: 0 0 40px;
+  align-items: center;
 }
 
 .introText {
   font-family: "Merriweather", serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-right: 25px;
   text-align: left;
   max-width: 60%; /* Adjust the width to balance with the brands section */
@@ -109,16 +114,19 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  text-align: center;
 }
 
 .brandsWrapper {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap; /* Allows logos to wrap to new lines if needed */
+  max-width: 100%;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .brandLogo {
-  margin: 10px;
   flex-shrink: 0; /* Prevent logos from shrinking */
 }
 
@@ -145,10 +153,6 @@
     max-width: 100%;
     margin-right: 0;
     margin-bottom: 20px;
-  }
-
-  .brandsWrapper {
-    justify-content: center;
   }
 }
 

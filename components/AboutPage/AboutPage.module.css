@@ -1,40 +1,47 @@
+/* Container styling */
 .aboutContainer {
   display: flex;
+  flex-direction: row; /* Stack items horizontally by default */
   max-width: 1300px;
   padding: 0 30px;
-  flex-flow: row nowrap;
   overflow-y: auto; /* Allow vertical scrolling */
   overflow-x: hidden; /* Prevent horizontal scrolling */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align items to the top */
   gap: 30px;
-  height: 100vh; /* Set a fixed height for scrolling */
+  min-height: 100vh; /* Minimum height for the viewport */
 }
 
-/* ImageWrapper and Image remain the same */
-
+/* ImageWrapper and Image styling */
 .imageWrapper {
-  flex: 1;
+  flex: 0 0 auto; /* Ensure the image doesn't stretch inappropriately */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px; /* Limit max width on larger screens */
+  margin-bottom: 20px; /* Add some space below the image */
 }
 
 .image {
   border-radius: 10px;
   object-fit: cover;
+  width: 100%; /* Ensure the image scales with the wrapper */
+  height: auto; /* Maintain aspect ratio */
 }
 
-/* Text Content and its elements remain the same */
-
+/* Text Content and its elements styling */
 .textCont {
   text-align: left;
   display: flex;
-  flex: 1.5;
+  flex: 1;
   padding: 0 20px;
   flex-flow: column nowrap;
+  overflow-y: visible; /* Allow the text to be fully visible */
+  max-width: 800px; /* Constrain width for readability */
 }
 
+/* Heading and Paragraph styling */
 .textCont h1 {
   font-size: 3rem;
   margin: 0 0 20px 0;
@@ -52,11 +59,17 @@
 /* Mobile Devices: max-width 600px */
 @media (max-width: 600px) {
   .aboutContainer {
-    flex-flow: column nowrap;
-    padding: 20px;
+    flex-direction: column; /* Stack items vertically on mobile */
+    padding: 40px 20px;
     align-items: center;
-    max-height: 1000px; /* Adjust height for mobile */
-    overflow-y: auto;
+    height: 100vh; /* Allow the container to grow as needed */
+    overflow-y: auto; /* Enable scrolling on mobile */
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 300px; /* Adjust width for better mobile viewing */
+    margin-bottom: 20px; /* Ensure margin below the image */
   }
 
   .textCont {
@@ -68,9 +81,9 @@
     text-align: center;
   }
 
-  .imageWrapper {
-    width: 100%;
-    max-width: 300px;
+  .textCont p {
+    font-size: 1.2rem;
+    text-align: center;
   }
 }
 
@@ -79,11 +92,21 @@
   .aboutContainer {
     padding: 40px;
     overflow-y: auto;
+    flex-direction: row; /* Keep items side by side */
     max-height: 85vh;
+  }
+
+  .imageWrapper {
+    max-width: 250px; /* Limit the width of the image on tablets */
+    margin-bottom: 0; /* Remove bottom margin on larger screens */
   }
 
   .textCont h1 {
     font-size: 2.8rem;
+  }
+
+  .textCont p {
+    font-size: 1.1rem;
   }
 }
 
@@ -93,10 +116,19 @@
     padding: 50px;
     max-height: 100vh;
     overflow-y: auto;
+    flex-direction: row; /* Keep items side by side */
+  }
+
+  .imageWrapper {
+    max-width: 300px; /* Adjust the max-width for larger screens */
   }
 
   .textCont h1 {
     font-size: 3.2rem;
+  }
+
+  .textCont p {
+    font-size: 1.15rem;
   }
 }
 
@@ -106,9 +138,18 @@
     padding: 60px;
     max-height: 100vh;
     overflow-y: auto;
+    flex-direction: row; /* Keep items side by side */
+  }
+
+  .imageWrapper {
+    max-width: 350px; /* Adjust the max-width for even larger screens */
   }
 
   .textCont h1 {
     font-size: 3.5rem;
+  }
+
+  .textCont p {
+    font-size: 1.2rem;
   }
 }

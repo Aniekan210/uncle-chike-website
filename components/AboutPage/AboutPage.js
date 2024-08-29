@@ -19,7 +19,7 @@ const AboutPage = () => {
         whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
-        {deviceType !== 'mobile' && (<Image
+        <Image
           src={'/images/chike.jpg'}
           alt="Chike"
           layout="responsive"
@@ -27,7 +27,7 @@ const AboutPage = () => {
           height={600}
           className={styles.image}
           priority
-        />)}
+        />
       </motion.div>
 
       <motion.div
