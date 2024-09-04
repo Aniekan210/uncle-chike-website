@@ -39,7 +39,7 @@ export default function ContactForm() {
                 from_email: email,
                 subject: subject,
                 message: message,
-                to_email: 'ani8dar@gmail.com',
+                to_email: 'Ohiagu.chike@gmail.com',
             };
 
             emailjs.send(
