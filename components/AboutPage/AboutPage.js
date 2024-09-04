@@ -20,7 +20,7 @@ const AboutPage = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <Image
-          src={'/images/chik.jpg'}
+          src={'/images/chike.jpg'}
           alt="Chike"
           layout="responsive"
           width={400}

@@ -33,7 +33,7 @@
 }
 
 .imageWrapper:hover .image {
-  filter: grayscale(25%); /* Remove grayscale filter on hover */
+  filter: grayscale(0%); /* Remove grayscale filter on hover */
 }
 
 /* Text Content and its elements styling */
@@ -79,7 +79,7 @@
   }
 
   .image {
-    filter: grayscale(25%); /* Remove grayscale filter on hover */
+    filter: grayscale(0%); /* Remove grayscale filter on hover */
   }
 
   .textCont {
