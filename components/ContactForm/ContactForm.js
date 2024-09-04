@@ -5,6 +5,7 @@
 import { motion } from 'framer-motion';
 import styles from './ContactForm.module.css'; // Import the external CSS
 import { useEffect, useState } from 'react';
+import emailjs from 'emailjs-com';
 
 export default function ContactForm() {
     const [name, setName] = useState('');
@@ -28,20 +29,47 @@ export default function ContactForm() {
         });
     }, [name, email, subject, message]);
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        const { name, email, subject, message } = formData;
+
         if (name && email && subject && message) {
-            console.log(formData);
-            setName('');
-            setEmail('');
-            setSubject('');
-            setMessage('');
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                subject: subject,
+                message: message,
+                to_email: 'ani8dar@gmail.com',
+            };
+
+            emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                templateParams,
+                process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+            )
+                .then((response) => {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                    setFormData({
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: '',
+                    });
+                })
+                .catch((error) => {
+                    console.error('FAILED...', error);
+                    alert('Failed to send email. Please try again later.');
+                });
         } else {
-            alert('Fill everything');
+            alert('Please fill out all fields.');
         }
-    }
+    };
 
     return (
-        <motion.div
+        <motion.form
+            onSubmit={handleFormSubmit}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3, delay: 0.8 }}
@@ -63,7 +91,7 @@ export default function ContactForm() {
                 <label htmlFor="message">Message</label>
                 <textarea id="message" name="message" rows="5" value={message} onInput={(e) => setMessage(e.target.value)} required></textarea>
             </div>
-            <button type="submit" onClick={handleFormSubmit} className={styles.submitButton}>Send Message</button>
-        </motion.div>
+            <button type="submit" className={styles.submitButton}>Send Message</button>
+        </motion.form>
     );
 }
