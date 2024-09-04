@@ -8,10 +8,13 @@ import styles from "./Experience.module.css"; // Assuming you're using CSS Modul
 const logos = [
   { src: "/images/prime_logo.png", alt: "PRIME" },
   { src: "/images/mtn_logo.png", alt: "MTN" },
+  { src: "/images/mtn-business_logo.png", alt: "MTN Business" },
   { src: "/images/fcmb_logo.png", alt: "Fcmb" },
   { src: "/images/nestle_logo.png", alt: "Nestle" },
   { src: "/images/nigerian-breweries_logo.png", alt: "Nigerian-breweries" },
   { src: "/images/fidelity_logo.png", alt: "Fidelity" },
+  { src: "/images/mouka_logo.png", alt: "Mouka Foam" },
+  { src: "/images/starTimes_logo.png", alt: "StarTimes" },
   { src: "/images/quickteller_logo.png", alt: "Quickteller" },
   { src: "/images/interswitch_logo.png", alt: "Interswitch" },
   // Add more logos as needed
@@ -133,7 +136,7 @@ const ExperiencePage = () => {
           <div className={styles.brandsWrapper}>
             {logos.map((logo, index) => (
               <div className={styles.brandLogo} key={index}>
-                <img src={logo.src} alt={logo.alt} width='100px' />
+                <img src={logo.src} alt={logo.alt} height='60px' />
               </div>
             ))}
           </div>
