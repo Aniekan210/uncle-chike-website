@@ -50,7 +50,7 @@
 .ads {
   display: grid;
   gap: 20px;
-  grid-template-columns: max(300px, 30vw);
+  grid-template-columns: max(250px, 28vw);
   margin-left: 100px;
   overflow-y: auto;
   padding: 20px 100px;
