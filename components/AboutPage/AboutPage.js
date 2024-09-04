@@ -20,7 +20,7 @@ const AboutPage = () => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <Image
-          src={'/images/chike.jpg'}
+          src={'/images/chik.jpg'}
           alt="Chike"
           layout="responsive"
           width={400}
@@ -29,6 +29,7 @@ const AboutPage = () => {
           priority
         />
       </motion.div>
+
 
       <motion.div
         className={styles.textCont}

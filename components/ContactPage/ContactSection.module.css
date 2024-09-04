@@ -28,7 +28,8 @@
 .contactHeading {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #ffffff; /* White color for the header */
+  text-align: left;
+  color: var(--gold); /* White color for the header */
 }
 
 .contactTopics {

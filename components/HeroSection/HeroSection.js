@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import styles from './HeroSection.module.css';
 import useDeviceType from '@/hooks/useDeviceType';
 
-const roles = ['Producer', 'Writer', 'Script Doctor', 'Director', 'Game Changer'];
+const roles = ['Producer', 'Writer', 'Script Doctor', 'Director', 'Disrupter'];
 
 export default function HeroSection() {
   const [isHovered, setIsHovered] = useState(false);

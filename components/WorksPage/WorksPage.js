@@ -10,7 +10,9 @@ const worksData = {
     { title: 'Lumos Global', role: 'Writer', url: 'https://www.youtube.com/embed/ZlV3t0wJBkY', id: 2 },
     { title: 'FreshYo', role: 'Writer', url: 'https://www.youtube.com/embed/O8ZmbVuxiqA', id: 3 },
     { title: 'Wimbiz: No More Lip Service', role: 'Producer/Writer', url: 'https://www.youtube.com/embed/kMRCkDkyTNk', id: 4 },
-    { title: 'Quickteller e-insurance', role: 'Writer', url: 'https://www.youtube.com/embed/3FwRvkgWzUQ', id: 5 }
+    { title: 'Quickteller e-insurance', role: 'Writer', url: 'https://www.youtube.com/embed/3FwRvkgWzUQ', id: 5 },
+    { title: 'StarTimes: classic bouquet reloading', role: 'Writer', url: 'https://www.youtube.com/embed/cWIHUf61uuw', id: 6 },
+    { title: 'StarTimes: easter promo', role: 'Writer', url: 'https://www.youtube.com/embed/zk9pHRQXvoE', id: 7 },
   ],
   FILM: [
     { title: 'My Name Is Zozo (2024 - Present)', role: 'Head Writer', url: 'https://www.youtube.com/embed/opSYp9bwtrc', id: 7 },
@@ -18,8 +20,9 @@ const worksData = {
     { title: 'Hello Neighbour (2023 - Present)', role: 'Head Writer', url: 'https://www.youtube.com/embed/U91pZL-weaI', id: 6 },
     { title: 'DADDY YO (2022)', role: 'Head Writer', url: '', id: 4 },
     { title: 'FCMB SHEVENTURES (Documentary)', role: 'Writer, Director & Interviewer', url: 'https://www.youtube.com/embed/-fqGTt2QL3w', id: 1 },
-    { title: 'Ts & Cs Apply (2021)', role: 'Director, Producer & Writer', url: 'https://www.youtube.com/embed/_zS-nxF6lKE', id: 2 },
+    { title: 'Ts & Cs Apply (2021)', role: 'Director, Producer, Actor & Writer', url: 'https://www.youtube.com/embed/_zS-nxF6lKE', id: 2 },
     { title: 'Back From The Future – Series (2022 – Present)', role: 'Writer', url: 'https://www.youtube.com/embed/iOPtbuhBeKU?list=PLS4AIjx7cKuQOU71UjhobaeUJonuUrN6H', id: 3 },
+    { title: 'Lamba Estate', role: 'Creator, Writer, Puppeteer & Voices', url: 'https://www.youtube.com/embed/tdo25jepgfw', id: 8 },
   ]
 };
 
@@ -140,7 +143,7 @@ const VideoModal = ({ work, closeModal }) => {
         ></iframe>
         <div className="modal-info">
           <h2>{work.title}</h2>
-          <p>{work.role}</p>
+          <p>Role: {work.role}</p>
         </div>
       </motion.div>
     </motion.div>

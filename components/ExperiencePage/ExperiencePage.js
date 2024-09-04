@@ -6,14 +6,14 @@ import Image from "next/image";
 import styles from "./Experience.module.css"; // Assuming you're using CSS Modules
 
 const logos = [
-  { src: "/images/quickteller_logo.png", alt: "Quickteller" },
-  { src: "/images/fidelity_logo.png", alt: "Fidelity" },
-  { src: "/images/nigerian-breweries_logo.png", alt: "Nigerian-breweries" },
-  { src: "/images/nestle_logo.png", alt: "Nestle" },
-  { src: "/images/fcmb_logo.png", alt: "Fcmb" },
-  { src: "/images/mtn_logo.png", alt: "MTN" },
-  { src: "/images/interswitch_logo.png", alt: "Interswitch" },
   { src: "/images/prime_logo.png", alt: "PRIME" },
+  { src: "/images/mtn_logo.png", alt: "MTN" },
+  { src: "/images/fcmb_logo.png", alt: "Fcmb" },
+  { src: "/images/nestle_logo.png", alt: "Nestle" },
+  { src: "/images/nigerian-breweries_logo.png", alt: "Nigerian-breweries" },
+  { src: "/images/fidelity_logo.png", alt: "Fidelity" },
+  { src: "/images/quickteller_logo.png", alt: "Quickteller" },
+  { src: "/images/interswitch_logo.png", alt: "Interswitch" },
   // Add more logos as needed
 ];
 
@@ -44,14 +44,6 @@ const ExperiencePage = () => {
               height={300}
               className={styles.awardImage}
             />
-            <motion.div
-              className={styles.tooltip}
-              initial={{ opacity: 0, y: 10 }}
-              whileHover={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              AMVCA 2023: Best Online Social Content Creator
-            </motion.div>
           </motion.div>
         </motion.div>
 
@@ -63,6 +55,7 @@ const ExperiencePage = () => {
         >
           <motion.h2
             className={styles.sectionTitle}
+            style={{ textAlign: 'center', justifyContent: 'left' }}
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}

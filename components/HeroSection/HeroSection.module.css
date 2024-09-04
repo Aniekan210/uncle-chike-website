@@ -23,13 +23,14 @@
 
 .textContainer h1 {
   cursor: default;
-  max-width: 750px;
+  width: 100%;
 }
 
 .roleDiv {
   display: grid;
   place-items: center;
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -40,7 +41,7 @@
   font-weight: 400;
   cursor: default;
   font-family: "Merriweather", serif;
-  color: #d4af37;
+  color: var(--gold);
   display: grid;
   place-items: center;
 }
@@ -48,8 +49,8 @@
 /* Responsive Breakpoints */
 @media (max-width: 600px) {
   .textContainer h1 {
-    font-size: 3.4rem;
-    line-height: 3.4rem;
+    font-size: 3.1rem;
+    line-height: 3.1rem;
   }
 
   .role {
@@ -60,34 +61,34 @@
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .textContainer h1 {
-    font-size: 4.6rem;
-    line-height: 4.6rem;
+    font-size: 4rem;
+    line-height: 4rem;
   }
 
   .role {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1440px) {
   .textContainer h1 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4.6rem;
+    line-height: 4.6rem;
   }
 
   .role {
-    font-size: 2.7rem;
+    font-size: 2.6rem;
   }
 }
 
 @media (min-width: 1441px) {
   .textContainer h1 {
-    font-size: 6rem;
-    line-height: 6rem;
+    font-size: 5rem;
+    line-height: 5rem;
     max-width: 900px;
   }
 
   .role {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 }

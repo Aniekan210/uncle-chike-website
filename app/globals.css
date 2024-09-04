@@ -1,18 +1,21 @@
 @import "aos/dist/aos.css";
-@import "react-responsive-carousel/lib/styles/carousel.min.css";
 @import url("https://fonts.googleapis.com/css2?&family=Playfair+Display&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --gold: #b07d07;
+}
+
 body {
   position: relative;
-  font-family: "Bodoni Moda";
+  font-family: "Baskervville SC", serif;
   font-weight: 400;
+  font-style: normal;
   display: flex;
   flex-flow: column nowrap;
   max-height: 100vh;

@@ -1,6 +1,6 @@
 /* Container styling */
 .container {
-  padding: 50px 20px;
+  padding: 50px 40px;
   color: #fff;
   height: 100vh; /* Fullscreen height */
   overflow-y: auto; /* Allow the entire container to scroll if needed */
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px; /* Space between the image and the awards text */
+  margin: 20px; /* Space between the image and the awards text */
 }
 
 .imageWrapper {
@@ -41,29 +41,6 @@
   transition: transform 0.3s ease;
 }
 
-.tooltip {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 14px;
-  opacity: 0;
-  visibility: hidden; /* Ensure it's hidden initially */
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
-  pointer-events: none; /* Ensure the tooltip doesn't block interactions */
-  z-index: 100; /* Ensure the tooltip is on top */
-}
-
-.imageWrapper:hover .tooltip {
-  opacity: 1;
-  visibility: visible; /* Make it visible on hover */
-  transform: translateX(-50%) translateY(-5px);
-}
-
 .awardsTextContainer {
   flex: 1;
   display: flex;
@@ -73,7 +50,12 @@
 
 .sectionTitle {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
+  text-align: center;
+  display: grid;
+  width: 100%;
+  place-items: center;
+  color: var(--gold);
 }
 
 .awardScrollable {
@@ -90,23 +72,33 @@
   text-align: left;
 }
 
+.awardText p {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.awardText p strong {
+  display: flex;
+  width: 100%;
+  color: var(--gold);
+}
+
 /* Content Section */
 .contentSection {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 40px;
-  padding: 0 0 40px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 30px;
   align-items: center;
 }
 
 .introText {
-  font-family: "Merriweather", serif;
-  font-size: 1.8rem;
-  margin-right: 25px;
-  text-align: left;
-  max-width: 60%; /* Adjust the width to balance with the brands section */
+  font-size: 1.4em;
+  margin: 0 40px 40px;
+  text-align: center;
+  width: 100%; /* Adjust the width to balance with the brands section */
 }
 
 .brandsSection {
@@ -115,15 +107,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: center;
+  width: 100%;
 }
 
 .brandsWrapper {
   display: flex;
   flex-flow: row wrap; /* Allows logos to wrap to new lines if needed */
-  max-width: 100%;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .brandLogo {
@@ -145,14 +138,10 @@
     flex: 1;
   }
 
-  .contentSection {
-    flex-direction: column;
-  }
-
   .introText {
+    font-size: 1.3em;
     max-width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
+    margin: 0 20px 20px;
   }
 }
 
@@ -163,10 +152,14 @@
 
   .sectionTitle {
     font-size: 1.5em;
+    text-align: center;
   }
 
   .awardText {
     font-size: 1.1em;
+  }
+  .introText {
+    font-size: 1.3em;
   }
 }
 
@@ -177,10 +170,14 @@
 
   .sectionTitle {
     font-size: 1.8em;
+    text-align: center;
   }
 
   .awardText {
     font-size: 1.3em;
+  }
+  .introText {
+    font-size: 1.5em;
   }
 }
 
@@ -191,9 +188,13 @@
 
   .sectionTitle {
     font-size: 2em;
+    text-align: center;
   }
 
   .awardText {
     font-size: 1.4em;
+  }
+  .introText {
+    font-size: 1.6em;
   }
 }
